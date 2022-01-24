@@ -1,42 +1,10 @@
-Ramon’s arm and head thingy
+## Rayhelmet
+# Ramon's helmet project 
 
-•	Helmet will be motorized with servos and LEDs
-o	Either take speech, or a button
-	Commands a Boolean to be true or false
-•	True: Helmet opens, LEDs turn off
-•	False: Helmet closes, LEDs turn on
+This project is a voice activated helmet, video can be found [here](https://www.youtube.com/watch?v=Rqv2LhUGKxs)
 
-•	Chest LED lights
-o	Perhaps use transistor circuit for 12V lights
-o	Need 5V-12V stepper
+This is a group project between Tom Kuzma, Ramon Vicencio, and myself. The three folders are for the script on the Raspberry Pi 4 and the 2 microcontrollers to drive the devices, ESP32 for the LEDs and Pi Pico for the servos.
 
-•	Arm will have a shocker (boost converter) which takes 5V but relies on a relay
-o	Either take speech, or a button
-	Will run for 2 seconds
+The RPi4 takes care of the microphone processing and voice activation script. It uses a picovoice module which was then incorporated with a rhino object. It then uses UART to talk to the ESP32 which then defers more tasks to the Pico.
 
-•	For speech detect:
-o	Parse strings
-o	“Helmet” will command helmet to open, close
-o	“Shock” will command boost converter to turn on
-o	“Wake” will command awareness
-	Then looks for either “Helmet” or “Shock” for 5 seconds, then closes
-	Might use button
-
-Design requirements:
-•	Waterproof or water resistant 
-•	Removable components
-o	Helmet circuit
-o	Arm 
-o	Brain (pi)
-•	Pi can connect to phone
-
-
-Distribution of files:
-•	Github
-
-Deadline: Oct 29
-
-Questions:
-•	Does Pi Zero W have a V_in?
-•	Can we connect to Pi Zero reliably with mobile?
-•	
+There are two servos that are controlled by the Pico. And a main 12V LED strip at the front that is controlled by the ESP32.
