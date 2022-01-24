@@ -1,5 +1,5 @@
-## Rayhelmet
-# Ramon's helmet project 
+# Rayhelmet
+## Ramon's helmet project 
 
 This project is a voice activated helmet, video can be found [here](https://www.youtube.com/watch?v=Rqv2LhUGKxs)
 
